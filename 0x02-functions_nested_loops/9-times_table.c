@@ -17,13 +17,14 @@ void times_table(void)
 		{
 			res = i * j;
 			if (res >= 10)
-			{	
+			{
 				first = res / 10;
 				last = res % 10;
 				_putchar(' ');
 				_putchar(first + '0');
 				_putchar(last + '0');
-			} else {
+			} else
+			{
 				if (j != 0)
 				{
 					_putchar(' ');
@@ -33,7 +34,7 @@ void times_table(void)
 			}
 			if (j != 9)
 				_putchar(',');
-		}		
+		}
 		_putchar('\n');
 	}
 }
