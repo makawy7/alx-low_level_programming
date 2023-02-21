@@ -9,14 +9,13 @@
 
 int main(void)
 {
-	long first, second, count, tmp;
+	long first, second, tmp;
 
 	first = 1;
 	second = 2;
-	count = 2;
 
 	printf("%ld\n", second);
-	
+
 	while (1)
 	{
 		tmp = second;
