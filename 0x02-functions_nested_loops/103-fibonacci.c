@@ -9,12 +9,11 @@
 
 int main(void)
 {
-	long first, second, tmp;
+	long first, second, sum, tmp;
 
 	first = 1;
 	second = 2;
-
-	printf("%ld\n", second);
+	sum = second;
 
 	while (1)
 	{
@@ -27,8 +26,9 @@ int main(void)
 		}
 		if (second % 2 == 0)
 		{
-			printf("%ld\n", second);
+			sum += second;
 		}
 	}
+	printf("%ld\n", sum);
 	return (0);
 }
