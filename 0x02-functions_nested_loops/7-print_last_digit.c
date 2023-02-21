@@ -11,13 +11,15 @@
 
 int print_last_digit(int n)
 {
+	long number;
 	int last;
 
-	last = n % 10;
+	number = n;
+	last = number % 10;
 
 	if (n < 0)
 	{
-		last = (-(n) % 10);
+		last = -(number) % 10;
 	}
 
 	_putchar('0' + last);
