@@ -3,11 +3,11 @@
 /**
  * main - Entry point
  *
- * Return: void
+ * Return: 0 (Success)
  *
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 	int res;
@@ -19,4 +19,5 @@ void main(void)
 			res = res + i;
 	}
 	printf("%d\n", res);
+	return (0);
 }
