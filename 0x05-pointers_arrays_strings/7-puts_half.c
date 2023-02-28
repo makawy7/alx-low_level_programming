@@ -25,15 +25,15 @@ void puts_half(char *str)
 		if (len % 2 == 0)
 		{
 			half_point = len / 2;
+			if (current >= half_point)
+				_putchar(*start);
 		} else
 		{
 			half_point = (len - 1) / 2;
+			if (current > half_point)
+				_putchar(*start);
 		}
 
-		if (current >= half_point)
-		{
-			_putchar(*start);
-		}
 		start++;
 		current++;
 	}
