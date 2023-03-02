@@ -23,7 +23,9 @@ char *cap_string(char *str)
 				*str = *str - 'a' + 'A';
 			}
 		}
-		if (*str == ' ' || *str == '\n' || *str == '\t')
+		if (*str == ' ' || *str == '\t' || *str == '\n' || *str == ','
+				|| *str == ';' || *str == '.' || *str == '!' || *str == '?' ||
+				*str == '"' || *str == '(' || *str == ')' || *str == '{' || *str == '}')
 		{
 			start = 1;
 		} else
