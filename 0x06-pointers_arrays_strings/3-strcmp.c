@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * _strcmp - function that works exactly like strcmp
  *
@@ -12,16 +13,15 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int diff = 0;
+	int diff;
 
-	while (1)
+	while (*s1 == *s2 && (*s1 != '\0' || *s2 != '\0'))
 	{
-		diff += *s1 - *s2;
-		if (*s1 != '\0' || *s2 != '\0')
-			break;
 		s1++;
 		s2++;
 	}
+
+	diff = *s1 - *s2;
 
 	return (diff);
 }
