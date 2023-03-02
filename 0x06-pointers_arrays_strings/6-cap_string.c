@@ -12,7 +12,7 @@
 char *cap_string(char *str)
 {
 	char *str_start = str;
-	int start = 0;
+	int start = 1;
 
 	while (*str != '\0')
 	{
