@@ -14,21 +14,24 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	char *dest_start = dest;
-	int dest_ended = 0;
+	int src_ended = 0;
 
-	while (*src != '\0' && n != 0)
+	while (n != 0)
 	{
-		if (*dest == '\0')
-			dest_ended = 1;
-		*dest = *src;
+		if (*src == '\0')
+			src_ended = 1;
+
+		if (src_ended)
+		{
+			*dest = '\0';
+		} else
+		{
+			*dest = *src;
+		}
 		src++;
 		dest++;
 		n--;
 	}
-
-	if (dest_ended)
-		*dest = '\0';
-	
 	return (dest_start);
 
 }
