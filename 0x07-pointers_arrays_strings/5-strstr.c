@@ -38,7 +38,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (match)
 		{
-			return (start);
+			return (needle);
 		}
 	}
 
