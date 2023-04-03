@@ -1,39 +1,34 @@
 #include "main.h"
 
 /**
- * cap_string - capitlize string
+ * cap_string - capitalizes everey word of a string
+ * @s: string to modify
  *
- * @str: string
- *
- * Return: void
- *
+ * Return: the resulting string
  */
-
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	char *str_start = str;
-	int start = 1;
+	int i, j;
 
-	while (*str != '\0')
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (start)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			if (*str >= 'a' && *str <= 'z')
+			if (s[i] == spe[j])
 			{
-				*str = *str - 'a' + 'A';
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
 			}
 		}
-		if (*str == ' ' || *str == '\t' || *str == '\n' || *str == ','
-				|| *str == ';' || *str == '.' || *str == '!' || *str == '?' ||
-				*str == '"' || *str == '(' || *str == ')' || *str == '{' || *str == '}')
-		{
-			start = 1;
-		} else
-		{
-			start = 0;
-		}
-		str++;
 	}
 
-	return (str_start);
+	return (s);
 }

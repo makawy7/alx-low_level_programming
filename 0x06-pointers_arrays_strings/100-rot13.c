@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * rot13 - encodes a string in rot13
@@ -9,6 +9,7 @@
 char *rot13(char *s)
 {
 	int i, j;
+
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
@@ -23,6 +24,6 @@ char *rot13(char *s)
 			}
 		}
 	}
+
 	return (s);
 }
-
