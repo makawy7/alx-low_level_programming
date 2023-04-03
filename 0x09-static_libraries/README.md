@@ -1,1 +1,1 @@
-This repository contains static libraries
+Ox09 Static Libraries task
